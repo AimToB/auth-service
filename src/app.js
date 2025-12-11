@@ -1,4 +1,5 @@
 import express from "express";
+import { hashPwd, verifyPwd } from "./utils/hash.js";
 
 const app = express();
 
@@ -6,8 +7,8 @@ const app = express();
 app.use(express.json());
 
 // test route
-app.get("/", (req,res) => {
-    res.json({msg: "Auth service is running!"});
+app.get("/", (req, res) => {
+  res.json({ msg: "Auth service is running!" });
 });
 
 export default app;
